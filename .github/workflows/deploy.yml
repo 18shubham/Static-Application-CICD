@@ -28,7 +28,7 @@ jobs:
           fi
 
       - name: Check content 📝
-        run: grep -q "Static" index.html
+        run: grep -q "Hello" index.html
 
       - name: Upload artifact 📤
         uses: actions/upload-pages-artifact@v3
