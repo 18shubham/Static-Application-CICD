@@ -43,11 +43,6 @@ jobs:
         with:
           path: './dist' # Notice we are now pointing to the 'dist' folder!
 
-      - name: Upload artifact 📤
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: '.' # This tells GitHub to take everything in the root folder
-
       - name: Deploy to GitHub Pages 🌐
         id: deployment
         uses: actions/deploy-pages@v4
