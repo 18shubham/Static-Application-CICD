@@ -30,6 +30,19 @@ jobs:
       - name: Check content 📝
         run: grep -q "Hello" index.html
 
+      - name: Setup Node.js 🟢
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Build the site 🏗️
+        run: npm run build
+
+      - name: Upload artifact 📤
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist' # Notice we are now pointing to the 'dist' folder!
+
       - name: Upload artifact 📤
         uses: actions/upload-pages-artifact@v3
         with:
