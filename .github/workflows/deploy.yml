@@ -28,7 +28,7 @@ jobs:
           fi
 
       - name: Check content 📝
-        run: grep -q "Hello" index.html
+        run: grep -q "Static" index.html
 
       - name: Setup Node.js 🟢
         uses: actions/setup-node@v4
